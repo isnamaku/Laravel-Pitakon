@@ -5,9 +5,14 @@ use DB;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Validation\Validator;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
-use Validator;
+// use Illuminate\Support\Facades\Validator; 
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Validation\Rule;
+use App\Http\Controllers\AuthNativeController;
+
 use Auth;
  
 class AuthNativeController extends BaseController
@@ -21,31 +26,47 @@ class AuthNativeController extends BaseController
 
 
     public function auth(Request $request){
-        // $email = $req->email;
-        // $pwd   = $req->password;
-        // if (Auth::attempt(['email' => $email, 'password' => $pwd])) {
-        //     return "Hai ". Auth::profil()->name;
-        // }else{
-        //     return "Maaf email atau password yang anda masukan tidak sesuai.";
-        // }
+        $email = $request->email;
+        $password   = $request->password;
+        // echo $email;
+   
 
-        $request->validate($request->all(),[
-            'email' => 'required|email',
-         ]);
+        // $request->validate($request->all(),[
+        //     'email' => 'required|email',
+        //  ]);
+        //  $request->validate($request, [
+        //     'email' => 'required|email',
+        // ]);
+        //    $user_data = array(
+        //     'email'  => $request->get('email'),
+        //     'password' => $request->get('password')
+        //    );
       
-           $user_data = array(
-            'email'  => $request->get('email'),
-            'password' => $request->get('password')
-           );
+        //    $user_data = array(
+        //     'email'  => $request->get('email'),
+        //     'password' => $request->get('password')
+        //    );
       
-           if(Auth::attempt($user_data))
-           {
-            return redirect('main/successlogin');
-           }
-           else
-           {
-            return back()->with('error', 'Wrong Login Details');
-           }
+        //    if(Auth::attempt($user_data))
+        //    {
+        //     return redirect('main/successlogin');
+        //    }
+        //    else
+        //    {
+        //     return back()->with('error', 'Wrong Login Details');
+        //    }
+       
+        // if (Auth::attempt(['email' => $email, 'password' => $password]))
+        // {
+        //     return redirect()->intended('layouts.showPertanyaan');
+        // // }
+        // $query = DB::table('profil')->get();
+        // if(["email=$email"]){
+
+            return redirect('/pertanyaan');
+            return view('/layouts/showPertanyaan', compact('query'));
+        // }
+       
       
     }
 
