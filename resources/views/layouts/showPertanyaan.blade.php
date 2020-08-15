@@ -2,7 +2,7 @@
 @section('showPertanyaan')
 <h1 class="h3 mb-4 text-gray-800">Questions</h1>
 <div class="card-body">
-          <a class="btn btn-primary mb-2" href="/pertanyaan/form">CREATE NEW PERTANYAAN</a>
+         
                 <table class="table table-bordered">
                   <thead>                  
                     <tr>
@@ -23,7 +23,7 @@
                       <td>{{ $p->profil_id}}</td>
                       <td>{{ $p->tanggal_dibuat}}</td>
                       <td class="project-actions text-right" style="display:flex;"  >
-                          <a class="btn btn-primary btn-sm ml-2" href="/pertanyaan/{{$p->id}}">
+                          <a class="btn btn-primary btn-sm ml-2" href="/pertanyaan/{{$p->id}}/view">
                               <i class="fas fa-folder">
                               </i>
                               View

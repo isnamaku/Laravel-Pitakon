@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Auth;
 
 class pertanyaanController extends BaseController
 {
@@ -41,21 +42,24 @@ class pertanyaanController extends BaseController
     //selesai
     
     public function index(){
+        
         $pertanyaan = DB::table('pertanyaan')->get();
         return view('layouts.showPertanyaan', compact('pertanyaan'));
+
+     
+       
     }
 
-    public function show($id){
-        // $p = DB::table('pertanyaan')->where('id', $id)->first();
-        // $p = DB::select('select * from pertanyaan where id = :id', ['id' => $id]);
-      
-        //dd($p);
-         // mengirim data pegawai ke view index
-        //  return view('layouts.show', compact('p'));
-        //  return view('layouts.show', ['p' => $p]);
-        
    
-     }
+    public function showDetailsJawaban($id){
+    $jawaban=  DB::table('jawaban')->where('pertanyaan_id', $id)->get();
+    return view('layouts.show', compact('jawaban'));
+
+   
+     } 
+
+   
+  
 
      // eidtselesai
 
