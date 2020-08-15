@@ -45,13 +45,13 @@ class pertanyaanController extends BaseController
         return view('layouts.showPertanyaan', compact('pertanyaan'));
     }
 
-    public function show($id){
-        // $p = DB::table('pertanyaan')->where('id', $id)->first();
+    public function showDetailsPertanyaan($id){
+        $p = DB::table('pertanyaan')->where('id', $id)->first();
         // $p = DB::select('select * from pertanyaan where id = :id', ['id' => $id]);
       
-        //dd($p);
-         // mengirim data pegawai ke view index
-        //  return view('layouts.show', compact('p'));
+        // dd($p);
+  
+         return view('layouts.show', compact('p'));
         //  return view('layouts.show', ['p' => $p]);
         
    

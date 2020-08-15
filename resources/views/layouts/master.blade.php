@@ -341,6 +341,7 @@
          
   
           @yield('showPertanyaan')
+          @yield('showDetailsPertanyaan')
           @yield('createPertanyaan')
           @yield('login')
           @yield('registration')

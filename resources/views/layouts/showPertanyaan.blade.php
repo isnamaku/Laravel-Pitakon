@@ -23,7 +23,7 @@
                       <td>{{ $p->profil_id}}</td>
                       <td>{{ $p->tanggal_dibuat}}</td>
                       <td class="project-actions text-right" style="display:flex;"  >
-                          <a class="btn btn-primary btn-sm ml-2" href="/pertanyaan/{{$p->id}}">
+                          <a class="btn btn-primary btn-sm ml-2" href="/pertanyaan/{{$p->id}}/view">
                               <i class="fas fa-folder">
                               </i>
                               View
