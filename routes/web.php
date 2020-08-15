@@ -22,7 +22,6 @@ Route::get('/master', function(){
 });
 
 
-
 Route::get('/pertanyaan/form', 'pertanyaanController@create'); // menampilkan pertanyaan
 Route::post('/pertanyaan/store', 'pertanyaanController@store'); // membuat pertanyaan baru
 Route::get('/pertanyaan', 'pertanyaanController@index'); // menyimpan data

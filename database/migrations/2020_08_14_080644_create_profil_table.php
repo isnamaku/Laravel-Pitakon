@@ -16,7 +16,8 @@ class CreateProfilTable extends Migration
         Schema::create('profil', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_lengkap');
-            $table->string('email');
+            $table->string('em
+            ail');
             $table->string('foto');
         });
     }
