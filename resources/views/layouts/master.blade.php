@@ -345,8 +345,8 @@
           @yield('createPertanyaan')
           @yield('login')
           @yield('registration')
-          <!-- @yield('erd')
-          @yield('table') -->
+          <!-- @yield('erd')-->
+
           @yield('form')
           @yield('formEdit')
 
