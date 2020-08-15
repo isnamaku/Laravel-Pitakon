@@ -1,2 +1,3 @@
-<p align="center"><img src="https://ibb.co/CKXGmYk" width="400"></p>
+<p align="center"><img src="https://i.ibb.co/60pCrT3/Capture.jpg" width="400"></p>
+<
 Pitakon : Proyek Akhir Kelas Laravel Web Development 
