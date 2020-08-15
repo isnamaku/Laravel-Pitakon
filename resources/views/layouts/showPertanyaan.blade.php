@@ -2,7 +2,7 @@
 @section('showPertanyaan')
 <h1 class="h3 mb-4 text-gray-800">Questions</h1>
 <div class="card-body">
-          <a class="btn btn-primary mb-2" href="/pertanyaan/form">CREATE NEW PERTANYAAN</a>
+         
                 <table class="table table-bordered">
                   <thead>                  
                     <tr>

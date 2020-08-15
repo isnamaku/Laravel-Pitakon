@@ -72,7 +72,7 @@
           <i class="fas fa-fw fa-search"></i>
           <span class="fi-question-mark"></span>
           
-          <span>Browse Question</span>
+          <span>Browse Questions</span>
         </a>
        
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
@@ -86,9 +86,10 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="/pertanyaan/form" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-edit"></i>
-          <span>Make Questions</span>
+          <span>Write A Question</span>
+          <!-- <a class="btn btn-primary mb-2" href="/pertanyaan/form">CREATE NEW PERTANYAAN</a> -->
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -113,8 +114,8 @@
         <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">User Account</h6>
-            <a class="collapse-item" href="login.html">Login</a>
-            <a class="collapse-item" href="register.html">Register</a>
+            <a class="collapse-item" href="/login">Login</a>
+            <a class="collapse-item" href="/register">Register</a>
         
           </div>
         </div>
@@ -349,6 +350,7 @@
 
           @yield('form')
           @yield('formEdit')
+     
 
           
         </div>
