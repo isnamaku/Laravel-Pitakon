@@ -21,7 +21,7 @@ Route::get('/master', function(){
 Route::get('/pertanyaan/form', 'pertanyaanController@create'); // menampilkan pertanyaan
 Route::post('/pertanyaan', 'pertanyaanController@store'); // menyimpan data
 Route::get('/pertanyaan', 'pertanyaanController@index'); // menyimpan data
-Route::get('/pertanyaan/{id}', 'PertanyaanController@show'); // menampilkan detail item dengan id 
+Route::get('/pertanyaan/{id}', 'pertanyaanController@show'); // menampilkan detail item dengan id 
 Route::get('/pertanyaan/{id}/edit', 'ItemController@edit'); // menampilkan form untuk edit item
 Route::put('/pertanyaan/{id}', 'pertanyaanController@update'); // menyimpan perubahan dari form edit
 Route::delete('/pertanyaan/{id}', 'pertanyaanController@destroy'); // menghapus data dengan id
