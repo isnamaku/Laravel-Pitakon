@@ -37,6 +37,8 @@ class pertanyaanController extends BaseController
         ]);
         return redirect('/pertanyaan');
     }
+
+    //selesai
     
     public function index(){
         $pertanyaan = DB::table('pertanyaan')->get();
@@ -44,18 +46,30 @@ class pertanyaanController extends BaseController
     }
 
     public function show($id){
-        $p = DB::table('pertanyaan')->where('id', $id)->first();
+        // $p = DB::table('pertanyaan')->where('id', $id)->first();
+        // $p = DB::select('select * from pertanyaan where id = :id', ['id' => $id]);
+      
         //dd($p);
          // mengirim data pegawai ke view index
-         return view('layouts.show', compact('p'));
+        //  return view('layouts.show', compact('p'));
+        //  return view('layouts.show', ['p' => $p]);
         
    
      }
 
+     // eidtselesai
+
     public function edit($id){
         $p = DB::table('pertanyaan')->where('id', $id)->first();
-        return view('layouts.editPertanyaan', compact('p'));
+      
+        // $p = DB::table('pertanyaan')->where('id','=', $id)->get();
+
+        // return view('layouts.editPertanyaan', compact('p'));
+        return view('layouts.editPertanyaan',['p' => $p]);
+        // return view('layouts.editPertanyaan', compact('p'));
     }
+
+    //update selesai
 
     public function update($id, Request $request){
         $query = DB::table('pertanyaan')

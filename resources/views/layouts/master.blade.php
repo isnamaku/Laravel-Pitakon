@@ -68,7 +68,7 @@
   
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{'/pertanyaan/show'}}" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="{{'/pertanyaan'}}" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-search"></i>
           <span class="fi-question-mark"></span>
           
@@ -339,10 +339,16 @@
 
           <!-- Page Heading -->
          
+  
+          @yield('showPertanyaan')
+          @yield('createPertanyaan')
+          @yield('login')
+          @yield('registration')
           <!-- @yield('erd')
           @yield('table') -->
           @yield('form')
-          @yield('showPertanyaan')
+          @yield('formEdit')
+
           
         </div>
         <!-- /.container-fluid -->

@@ -6,7 +6,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="/pertanyaan" method="POST">
+              <form role="form" action="/pertanyaan/store" method="POST">
 			  @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -19,7 +19,7 @@
                   </div>
 				  <div class="form-group">
                     <label for="judul">Tanggal</label>
-                    <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Tuliskan Tanggal">
+                    <input type="date" class="form-control" id="tanggal" name="tanggal_dibuat" placeholder="Tuliskan Tanggal">
                   </div>
                 <!-- /.card-body -->
 

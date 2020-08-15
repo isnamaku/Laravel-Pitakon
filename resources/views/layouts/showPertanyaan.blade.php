@@ -21,7 +21,7 @@
                       <td>{{ $p->judul}}</td>
                       <td>{{ $p->isi}}</td>
                       <td>{{ $p->profil_id}}</td>
-                      <td>{{ $p->tanggal_diperbaharui}}</td>
+                      <td>{{ $p->tanggal_dibuat}}</td>
                       <td class="project-actions text-right" style="display:flex;"  >
                           <a class="btn btn-primary btn-sm ml-2" href="/pertanyaan/{{$p->id}}">
                               <i class="fas fa-folder">
